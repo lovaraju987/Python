@@ -16,8 +16,8 @@ with open(file,'w') as f:  #writing content
     you want it to look. If it doesn\'t, make the appropriate changes
     in the text file version of the page using your word processor.''')
 
-with open(file,'r') as g:
-    text = g.read() #reading file content and storing
+with open(file,'r') as g: #reading file content and storing
+    text = g.read() 
 
 def count_variable(text,char): #counting given character
     count = 0
