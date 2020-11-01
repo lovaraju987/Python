@@ -28,4 +28,5 @@ def count_variable(text,char): #counting given character
 
 for char in 'abcdefghijklmnopqrstuvwxyz': #calculating percentage of each given character
     perc = 100 * count_variable(text,char)/len(text)
-    print(char,'=',round(perc,2),'%')
+   # print(char,'=',round(perc,2),'%')
+    print('{} = {}%'.format(char,round(perc,2)))
