@@ -13,6 +13,8 @@ print(next(countdown()))
 for i in countdown():
     print(f'number is {i}')
 
+#finate generators can be converted into lists
+print(list(countdown()))
 
 ''' genrators vs list-comprehensions :-
 generators used for memory efficient and list-comprehensions is used for execution speed  '''
