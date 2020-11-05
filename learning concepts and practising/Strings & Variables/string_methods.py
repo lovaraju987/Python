@@ -87,4 +87,6 @@ str6 = 'lova\traju\tpython\tprogrammer'
 #expandtabs()
 print(str6.expandtabs()) # It is used to replace all tab characters(“\t”) with whitespace. we can set tabsize also like this "str6.expandtabs(6)"
 
+#split()
+print(list(str1.split(' '))) #it converts the string into list based on using given substring argument
 
