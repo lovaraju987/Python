@@ -30,6 +30,7 @@ $               "hello$"  -  Ends with
 {}              "al{2}"   -  Exactly the specified number of occurrences
 |               "fs|ys"   -  Either or 
 ()              "(hello)"  -  capture and group  
+?               ".?hello"  -  zero and one
 '''
 
 
@@ -67,7 +68,38 @@ Set	                Description
 [+]	            In sets, +, *, ., |, (), $,{} has no special meaning, so [+] means: return a match for any + character in the string
 '''
 
+import re
 
+data  =   '''Born and raised in a Hindu family in coastal Gujarat,
+           western India, Gandhi trained in law at the Inner Temple,
+           London, and was called to the bar at age 22 in June 4, 1891.
+           After two uncertain years in India, where he was unable 1891 4, June
+           to start a successful law practice, he moved to
+           South Africa in 1893 to represent an Indian merchant in
+           a lawsuit. He went on to stay for 21 years. It was in
+           South Africa that Gandhi raised a family, and first
+           employed nonviolent resistance in a campaign for civil
+           rights. In 1915, aged 45, he returned to India. He set
+           about organising peasants, farmers, and urban labourers
+           to protest against excessive land-tax and discrimination.
+           Assuming leadership of the Indian National Congress in 1921,
+           Gandhi led nationwide campaigns for easing poverty,
+           expanding women's rights, building religious and ethnic amity,
+           ending untouchability, and above all for achieving Swaraj or
+           self-rule.[9
+'''
 
+reg = r'([A-Za-z]{4}) (\d\d?,) (\d{4})|(1891 4, June)'
 
+match = re.search(reg, data)
 
+print(match)
+
+# if match:
+#     print('group  ',match.group())
+#     print('group 0 ',match.group(0))
+#     print('group 1 ',match.group(1))
+#     print('group 2 ',match.group(2))
+#     print('group 3 ',match.group(3))
+# else:
+#     print('No Match')
